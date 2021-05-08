@@ -6,6 +6,8 @@ app.use('/', indexRouter);
 
 const usersRouter = require('./routes/user');
 
+app.use(express.static('public'))
+
 app.set('views', 'views')
 app.set('view engine', 'ejs');
 app.use(express.json());
