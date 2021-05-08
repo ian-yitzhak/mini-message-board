@@ -8,26 +8,32 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+     <link rel="stylesheet" href="/style.css">
+
+    <title>FORM</title>
   </head>
   <body>
 
 
-    <form method="POST" action="/new">
+   <form method="POST" action="/new">
+
+    <div class="container">
+      <h3 class="text-center">PLEASE LEAVE A MESSAGE </h3>
   <div class="form-group">
-    <label for="exampleInputEmail1">name</label>
+    <label for="exampleInputEmail1">User</label>
     <input type="text" class="form-control" id="exampleInputEmail1" name="user" aria-describedby="emailHelp" placeholder="enter name" required>
    
   </div>
   
 
   <div class="form-group">
-    <label for="exampleFormControlTextarea1">your message</label>
+    <label for="exampleFormControlTextarea1">Message</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" name="text" rows="3" required></textarea>
   </div>
 
 
   <button type="submit" class="btn btn-primary">Submit</button>
+</div>
 </form>
     
 

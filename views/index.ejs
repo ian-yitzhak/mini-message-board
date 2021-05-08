@@ -8,22 +8,30 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+
+     <link rel="stylesheet" href="/style.css">
+
     <title><%= title %></title>
   </head>
   <body>
 
-    <ul>
-      <% messages.forEach(function(message) { %>
+    <div class="mx-auto" style="width: 600px;">
+
+
+    <ol>
+     <% for (let i = 0; i < messages.length; i++) { %>
         <li>
-          <h3><%= message.user %></h3>
-          <p><%= message.text %></p>
-          <h6><%= message.added %></h6>
+          <h3><%= messages[i].user %></h3>
+          <p><%= messages[i].text %></p>
+          <h6><%= messages[i].added %></h6>
         </li>
-      <% }); %>
-    </ul>
+      <% }  %>
+    </ol>
 
 
     <a class="btn btn-warning" href="new" role="button">add message</a>
+
+  </div>
 
 
  

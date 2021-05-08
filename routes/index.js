@@ -12,8 +12,8 @@ const messages = [
 },
 
 {
-	text: "Hello iano",
-    user: "ian0",
+	text: "go watch a match",
+    user: "philaden",
     added: new Date(),
 
 
@@ -21,16 +21,20 @@ const messages = [
 ]
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
+router.get("/", function (req, res) {
   res.render("index", { messages, title: "Mini Message Board" });
 });
 
-router.get("/new", function (req, res, next) {
-  // Some function for processing the request goes here.
+//dispalay the form page
+
+
+router.get("/new", function (req, res) {
   res.render("form");
 });
 
-router.post("/new", function (req, res, next) {
+//create items
+
+router.post("/new", function (req, res) {
 
 	const context = {
 		text: req.body.text, 
